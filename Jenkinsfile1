@@ -8,7 +8,7 @@ pipeline{
     
         stage('Git clone'){
             steps{
-                 git branch: 'master', git changelog: false, credentialsId: 'f9dcdd6d-8985-49ef-b10a-c17a8e9fdb8b', poll: false, url: 'https://github.com/Devanshc12/my-app1.git'
+                 git branch: 'master', changelog: false, credentialsId: 'f9dcdd6d-8985-49ef-b10a-c17a8e9fdb8b', poll: false, url: 'https://github.com/Devanshc12/my-app1.git'
              }
         }
         
