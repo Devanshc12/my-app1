@@ -8,4 +8,24 @@ pipeline{
     
         stage('Git clone'){
             steps{
-                 git branch:
+                 git branch: 'master', git changelog: false, credentialsId: 'f9dcdd6d-8985-49ef-b10a-c17a8e9fdb8b', poll: false, url: 'https://github.com/Devanshc12/my-app1.git'
+             }
+        }
+        
+        stage('Build'){
+             steps{
+                 bat 'mvn clean install'
+                 }
+        }
+        
+        stage('SonarQube Analysis'){
+            steps{
+                withSonarQubeEnv('Sonarqube'){
+                    bat "mvn sonar:sonar
+                 }
+            }
+        }
+     }
+}     
+     
+        
