@@ -7,9 +7,7 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <build>
-    <finalName>docker-jenkins-integration-sample</finalName>
-  <build>  
+  
     
 
   <name>my-app</name>
