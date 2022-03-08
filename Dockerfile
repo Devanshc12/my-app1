@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 9080
-ADD target/my-app.jar my-app.jar
+WORKDIR /src/java
 ENTRYPOINT ["java","-jar","/my-app.jar"]
